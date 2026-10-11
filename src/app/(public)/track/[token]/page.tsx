@@ -10,6 +10,7 @@ import { CollectionCode } from "@/components/tracking/CollectionCode";
 import { CounterInfo } from "@/components/tracking/CounterInfo";
 import { ReceiverTimeline } from "@/components/tracking/ReceiverTimeline";
 import { SEED_DEPARTURES } from "@/lib/data/seed";
+import { LiveRouteMap } from "@/components/map/LiveRouteMap";
 
 export default function ReceiverTrackPage() {
   const params = useParams();
@@ -50,6 +51,14 @@ export default function ReceiverTrackPage() {
 
   return (
     <div className="flex flex-col gap-5">
+      {/* Live Route Map */}
+      <LiveRouteMap
+        shipmentStatus={shipment.status}
+        shipmentId={shipment.id}
+        receiverName={shipment.receiver.name}
+        className="w-full"
+      />
+
       {/* Top Banner Card */}
       <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs flex flex-col gap-3">
         <div className="flex items-center justify-between border-b border-slate-100 pb-3">

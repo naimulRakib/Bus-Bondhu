@@ -4,6 +4,7 @@ import "./globals.css";
 import { I18nProvider } from "@/lib/i18n/context";
 import { DemoBanner } from "@/components/shared/DemoBanner";
 import { DemoControlPanel } from "@/components/demo-panel/DemoControlPanel";
+import { DemoLauncher } from "@/components/demo-panel/DemoLauncher";
 import { InvestorLensModal } from "@/components/investor/InvestorLensModal";
 import { Toaster } from "sonner";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
           <DemoBanner />
           <div className="flex-1 flex flex-col">{children}</div>
           <DemoControlPanel />
+          <DemoLauncher />
           <InvestorLensModal />
           <Toaster
             position="top-right"

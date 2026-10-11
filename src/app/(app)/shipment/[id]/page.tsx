@@ -16,6 +16,7 @@ import { PriceDisplay } from "@/components/shared/PriceDisplay";
 import { Timeline } from "@/components/shipment/Timeline";
 import { CountdownTimer } from "@/components/shipment/CountdownTimer";
 import { SEED_DEPARTURES } from "@/lib/data/seed";
+import { LiveRouteMap } from "@/components/map/LiveRouteMap";
 
 export default function ShipmentDetailPage() {
   const params = useParams();
@@ -64,6 +65,14 @@ export default function ShipmentDetailPage() {
 
   return (
     <div className="flex flex-col gap-5">
+      {/* Live Route Map */}
+      <LiveRouteMap
+        shipmentStatus={shipment.status}
+        shipmentId={shipment.id}
+        receiverName={shipment.receiver.name}
+        className="w-full"
+      />
+
       {/* Top back & actions */}
       <div className="flex items-center justify-between">
         <Link
