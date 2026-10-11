@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Play, SkipForward, RotateCcw, X, Zap, Bus, CheckCircle2, AlertTriangle } from "lucide-react";
+import { Play, SkipForward, RotateCcw, X, Zap, Bus, CheckCircle2 } from "lucide-react";
 import { useDemoStore } from "@/lib/store/demo-store";
 import { useShipmentStore } from "@/lib/store/shipment-store";
 import { useNotificationStore } from "@/lib/store/notification-store";
@@ -149,7 +149,7 @@ export function DemoOrchestrator({ isOpen, onClose }: Props) {
   // ─── Main step driver ─────────────────────────────────────────────────────
   useEffect(() => {
     if (mode !== "running") return;
-    if (stepIndex >= DEMO_SCRIPT.length) { setMode("done"); return; }
+    if (stepIndex >= DEMO_SCRIPT.length) return;
 
     const step = DEMO_SCRIPT[stepIndex];
 

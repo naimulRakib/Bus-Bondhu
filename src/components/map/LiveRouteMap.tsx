@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ShipmentStatus } from "@/lib/types";
 
 // ─── Bangladesh city coordinates (SVG viewport 0-800 x 0-600) ─────────────────
@@ -78,7 +78,6 @@ export function LiveRouteMap({ shipmentStatus, shipmentId, receiverName, classNa
   const [animProgress, setAnimProgress] = useState(targetProgress);
   const animRef = useRef<number | null>(null);
   const prevProgress = useRef(animProgress);
-  const [pulse, setPulse] = useState(false);
 
   // Smooth animation toward target progress
   useEffect(() => {
@@ -104,13 +103,6 @@ export function LiveRouteMap({ shipmentStatus, shipmentId, receiverName, classNa
     animRef.current = requestAnimationFrame(step);
     return () => { if (animRef.current) cancelAnimationFrame(animRef.current); };
   }, [targetProgress]);
-
-  // Pulse on status change
-  useEffect(() => {
-    setPulse(true);
-    const t = setTimeout(() => setPulse(false), 1000);
-    return () => clearTimeout(t);
-  }, [shipmentStatus]);
 
   // Bus position
   const origin = CITIES[ROUTE_STOPS[0]];
@@ -306,15 +298,7 @@ export function LiveRouteMap({ shipmentStatus, shipmentId, receiverName, classNa
 
         {/* ─── Progress bar at bottom ─── */}
         <rect x={40} y={520} width={720} height={6} rx={3} fill="#1e293b" />
-        <rect x={40} y={520} width={720 * Math.min(animProgress, 1)} height={6} rx={3} fill={accentColor}>
-          <animate
-            attributeName="width"
-            from={`${720 * prevProgress.current}`}
-            to={`${720 * Math.min(animProgress, 1)}`}
-            dur="1.8s"
-            fill="freeze"
-          />
-        </rect>
+        <rect x={40} y={520} width={720 * Math.min(animProgress, 1)} height={6} rx={3} fill={accentColor} />
         <text x={40} y={540} fill="#475569" fontSize="8" fontFamily="system-ui">Dhaka</text>
         <text x={760} y={540} textAnchor="end" fill="#475569" fontSize="8" fontFamily="system-ui">Cumilla</text>
         <text x={40 + 720 * Math.min(animProgress, 1)} y={515} textAnchor="middle" fill={accentColor} fontSize="9" fontWeight="bold" fontFamily="system-ui">

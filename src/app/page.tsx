@@ -37,16 +37,13 @@ export default function LandingPage() {
   const { t } = useI18n();
   const [isDemoOpen, setIsDemoOpen] = useState(false);
   const [heroStatus, setHeroStatus] = useState<ShipmentStatus>("loaded_departed");
-  const [statusIdx, setStatusIdx] = useState(3); // start at loaded_departed
 
   // Cycle through statuses for hero map preview
   useEffect(() => {
+    let idx = 3;
     const interval = setInterval(() => {
-      setStatusIdx((prev) => {
-        const next = (prev + 1) % STATUS_CYCLE.length;
-        setHeroStatus(STATUS_CYCLE[next]);
-        return next;
-      });
+      idx = (idx + 1) % STATUS_CYCLE.length;
+      setHeroStatus(STATUS_CYCLE[idx]);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
