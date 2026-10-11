@@ -1,0 +1,67 @@
+{
+  "app": {
+    "name": "BusBondhu Express",
+    "tagline": "Trust & Dispatch Layer for Intercity Bus Parcels",
+    "disclaimer": "Prototype demo. Simulated data. No real parcels, payments or SMS."
+  },
+  "nav": {
+    "home": "Home",
+    "book": "Book Parcel",
+    "notifications": "Alerts & SMS",
+    "demo": "Demo Controls"
+  },
+  "landing": {
+    "heroTitle": "Intercity Bus Parcels, Built on Custody & Proof.",
+    "heroSubtitle": "Wholesalers and retailers restock faster with verified departures, upfront prices, digital handover scans, and secret receiver collection codes.",
+    "cta": "Open Live Demo",
+    "pilotRoute": "Pilot Corridor: Dhaka ↔ Cumilla",
+    "journeyTitle": "The 7-Step Verified Journey"
+  },
+  "journey": {
+    "step1": "1. Book Confirmed Slot",
+    "step1Desc": "Merchant selects scheduled departure and gets fixed upfront price.",
+    "step2": "2. Counter Verification",
+    "step2Desc": "Origin counter scans parcel QR, verifies band weight and condition.",
+    "step3": "3. Trip Assignment",
+    "step3Desc": "Parcel assigned to verified bus manifest with departure cutoff lock.",
+    "step4": "4. Departure & En-Route",
+    "step4Desc": "Luggage boot loaded. Supervisor marks departure scan.",
+    "step5": "5. Destination Arrival",
+    "step5Desc": "Unloaded at destination counter into secure storage holding.",
+    "step6": "6. Receiver SMS Code",
+    "step6Desc": "Receiver alerted via SMS with unique 6-digit pickup code.",
+    "step7": "7. Verified Collection",
+    "step7Desc": "Code verified at counter before release. Settlement completed."
+  },
+  "home": {
+    "greeting": "Welcome back",
+    "quickBook": "Book a New Parcel",
+    "quickBookSubtitle": "Confirmed departure on Dhaka → Cumilla",
+    "activeShipments": "Active Shipments",
+    "history": "Shipment History",
+    "noActive": "No active shipments at this moment.",
+    "noHistory": "No completed shipments yet."
+  },
+  "shipment": {
+    "sender": "Sender",
+    "receiver": "Receiver",
+    "route": "Route",
+    "departure": "Departure",
+    "status": "Status",
+    "price": "Indicative Price",
+    "trackingId": "Tracking ID",
+    "collectionCode": "Collection Code",
+    "showEvidence": "View Custody Evidence",
+    "reportIssue": "Report an Issue / Claim"
+  },
+  "common": {
+    "back": "Back",
+    "continue": "Continue",
+    "confirm": "Confirm Booking",
+    "indicative": "indicative",
+    "bdt": "Tk",
+    "copy": "Copy Link",
+    "copied": "Copied!",
+    "close": "Close"
+  }
+}

@@ -1,0 +1,45 @@
+:root {
+  /* Brand Palette */
+  --color-primary: hsl(215, 75%, 45%);
+  --color-primary-light: hsl(215, 75%, 55%);
+  --color-primary-dark: hsl(215, 75%, 35%);
+  --color-secondary: hsl(160, 55%, 42%);
+  --color-accent: hsl(35, 90%, 55%);
+
+  /* Neutrals */
+  --color-bg: hsl(220, 15%, 97%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-surface-raised: hsl(220, 15%, 94%);
+  --color-text-primary: hsl(220, 20%, 15%);
+  --color-text-secondary: hsl(220, 10%, 45%);
+  --color-text-inverse: hsl(0, 0%, 100%);
+  --color-border: hsl(220, 15%, 88%);
+  --color-border-focus: var(--color-primary);
+
+  /* Status Tokens */
+  --color-status-booked: hsl(215, 60%, 55%);
+  --color-status-in-progress: hsl(35, 80%, 50%);
+  --color-status-completed: hsl(160, 55%, 42%);
+  --color-status-exception: hsl(0, 70%, 55%);
+  --color-status-delayed: hsl(25, 85%, 55%);
+
+  /* Demo Panel Theme */
+  --color-demo-bg: hsl(260, 30%, 16%);
+  --color-demo-surface: hsl(260, 25%, 22%);
+  --color-demo-text: hsl(0, 0%, 94%);
+  --color-demo-muted: hsl(260, 15%, 65%);
+  --color-demo-accent: hsl(280, 70%, 65%);
+  --color-demo-border: hsl(260, 20%, 30%);
+
+  /* Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px hsla(220, 20%, 15%, 0.05);
+  --shadow-md: 0 4px 12px hsla(220, 20%, 15%, 0.08);
+  --shadow-lg: 0 8px 24px hsla(220, 20%, 15%, 0.12);
+}

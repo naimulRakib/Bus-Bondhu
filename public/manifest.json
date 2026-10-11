@@ -1,0 +1,16 @@
+{
+  "name": "BusBondhu Express",
+  "short_name": "BusBondhu",
+  "description": "Trust & Dispatch Layer for Intercity Bus Parcels",
+  "start_url": "/home",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
